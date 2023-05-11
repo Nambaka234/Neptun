@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Hotel_neptun2.SignWindow"
+        Title="SignWindow"
+		Icon="/images/2647659.png">	
+	<Window.Background>
+		<ImageBrush Source="/images/4fb2828237ec6334b4e1d8200376165f.jpg" Stretch="UniformToFill" TileMode="None"/>
+	</Window.Background>
+
+	<Grid RowDefinitions="Auto,*,Auto">
+		<Button
+			Grid.Row="1"
+			Name="AuterlingButton"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Margin="0,0,0,0"
+			Content="Авторизация"
+			Foreground="Black"
+			BorderBrush="Black"
+			Background="Beige"
+			FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="1"
+			Name="KlientButton"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Margin="0,80,0,0"
+			Foreground="Black"
+			BorderBrush="Black"
+			Background="Beige"
+			Content="Войти как клиент"
+			FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="0,0,40,60"
+			Name="BackButton"
+			HorizontalAlignment="Right"
+			DockPanel.Dock="Bottom"
+			Foreground="Black"
+			BorderBrush="Black"
+			Background="Beige"
+			Content="Вернуться на главную"
+			FontFamily="Comic Sans MS"/>
+	</Grid>
+</Window>

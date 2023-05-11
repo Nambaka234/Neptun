@@ -1,0 +1,82 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="850"
+        x:Class="Hotel_neptun2.O_nas"
+        Title="O_nas"
+		Icon="/images/2647659.png">
+
+	<Window.Background>
+		<ImageBrush Source="/images/Svitok.webp" Stretch="UniformToFill" TileMode="None"/>
+	</Window.Background>
+
+	<Grid RowDefinitions="Auto,*,Auto"
+		  ColumnDefinitions="*,*,*">
+
+		<StackPanel
+			Grid.Column="1"
+			Grid.Row="0"
+			Height="100"
+			Margin="0,60,0,0"
+			Width="600">
+			<TextBlock
+				TextWrapping="Wrap"
+				TextAlignment="Center"
+				FontSize="24"
+				Foreground="Black"
+				FontFamily="Times new Roman"
+				FontStyle="Italic"
+				Text="Наш уютный отель расположен в историческом центре Выборга.
+У нашего отеля очень удобное расположение, он находится в цетре города, недалеко наберажная, центральный парк и все достопримечательности города."/>
+		</StackPanel>
+
+
+		<StackPanel
+					Grid.Column="1"
+					Grid.Row="1"
+					Height="100"
+					Margin="0,20,0,0"
+					Width="600">
+			<TextBlock
+				TextWrapping="Wrap"
+				TextAlignment="Center"
+				FontSize="24"
+				Foreground="Black"
+				FontFamily="Times new Roman"
+				FontStyle="Italic"
+				Text="Наш отель открылся в 2020 году. Гостиница небольшая, но уютная, отличается разнообразием и оригинальностью номеров.
+		Всего номеров – 25, в том числе класса семейный, одноместный, двуместный и улучшенный."/>
+		</StackPanel>
+
+		<StackPanel
+					Grid.Column="1"
+					Grid.Row="2"
+					Height="100"
+					Margin="0,40,0,140"
+					Width="600">
+			<TextBlock
+				TextWrapping="Wrap"
+				TextAlignment="Center"
+				FontSize="24"
+				Foreground="Black"
+				FontFamily="Times new Roman"
+				FontStyle="Italic"
+				Text="Все номера оборудованы по стандартам, есть телевизоры,кабельное тв,Wi-Fi,кровати по желанию гостей можно раздвинуть и составить вместе. Бельё сатиновое , высшего класса качества. В гостинице работает собственная прачечная.
+		Есть стоянка для гостей нашего отеля."/>
+		</StackPanel>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="0,180,0,0"
+			Name="BackButton"
+			HorizontalAlignment="Center"
+			DockPanel.Dock="Bottom"
+			Foreground="Black"
+			BorderBrush="Black"
+			Background="Beige"
+			Content="Назад"
+			FontFamily="Comic Sans MS"/>
+	</Grid>
+</Window>

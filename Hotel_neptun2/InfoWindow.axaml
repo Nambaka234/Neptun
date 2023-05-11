@@ -1,0 +1,112 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Hotel_neptun2.InfoWindow"
+        Title="InfoWindow"
+		Icon="/images/2647659.png">
+
+	<Window.Background>
+		<ImageBrush Source="/images/2DGUxLac0VU.jpg" Stretch="UniformToFill" TileMode="None"/>
+	</Window.Background>
+	<Grid RowDefinitions="Auto,*,Auto"
+		  ColumnDefinitions="*,*,*">
+		<StackPanel
+			Grid.Column="1"
+			Grid.Row="0"
+			Height="200"
+			Width="600">
+
+			<TextBlock
+				Text="Контакты: "
+				TextAlignment="Center"
+				FontSize="24"
+				Foreground="White"
+				FontFamily="Times new Roman"
+				FontStyle="Italic"/>
+
+			<TextBlock
+				Text="Телефон - +7 (921)222-11-11"
+				TextAlignment="Center"
+				FontSize="24"
+				Foreground="White"
+				FontFamily="Times new Roman"
+				FontStyle="Italic"/>
+
+			<TextBlock
+				Text="Email - neptun@hotel.ru"
+				TextAlignment="Center"
+				FontSize="24"
+				Foreground="White"
+				FontFamily="Times new Roman"
+				FontStyle="Italic"/>
+		</StackPanel>
+
+		<StackPanel
+			Grid.Column="1"
+			Grid.Row="1"
+			Height="200"
+			Width="600">
+
+			<TextBlock
+					Text="Мини-отель Нептун"
+					TextAlignment="Center"
+					FontSize="64"
+					Foreground="White"
+					FontFamily="Times new Roman"
+					FontStyle="Italic"/>
+		</StackPanel>
+
+		<StackPanel
+			Grid.Column="1"
+			Grid.Row="2"
+			Height="200"
+			Width="400"			>
+			<TextBlock
+				TextWrapping="Wrap"
+				TextAlignment="Center"
+				FontSize="24"
+				Foreground="White"
+				FontFamily="Times new Roman"
+				FontStyle="Italic"
+				Text="Здесь, в этом прекрасном мини-отеле, вы сможете провести незабываемые отпуск или выходные, наслаждаясь прекрассным комфортом в наших номерах"/>
+		</StackPanel>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="0"
+			Name="HostButton"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Margin="0,0,0,0"
+			Content="Наши номера"
+			Background="Beige"
+			Foreground="Black"
+			FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="2"
+			Name="VhodButton"
+			DockPanel.Dock="Bottom"
+			Margin="0,40,10,0"
+			HorizontalAlignment="Right"
+			Background="Beige"
+			Foreground="Black"
+			Content="Войти"
+			FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="0"
+			Name="OnasButton"
+			DockPanel.Dock="Top"
+			Margin="0,0,0,80"
+			HorizontalAlignment="Center"
+			Background="Beige"
+			Foreground="Black"
+			Content="О нас"
+			FontFamily="Comic Sans MS"/>
+	</Grid>
+</Window>

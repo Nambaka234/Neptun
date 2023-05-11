@@ -1,0 +1,70 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Hotel_neptun2.AddNomer"
+        Title="AddNomer"
+		Background="Beige"
+		Icon="/images/2647659.png">
+	<Grid
+		  Margin="10"
+		  ColumnDefinitions="*,*"
+		  RowDefinitions="*,Auto">
+		<TextBox Grid.Column="1"
+				   Name="Description"
+				   Text="{Binding Path=Description}"
+				   Margin="10,0,10,10"
+				   Watermark="Описание"/>
+		<StackPanel Spacing="10">
+			<ComboBox
+				Name="ClassComboBox"
+				SelectedIndex="0"
+				FontFamily="Comic Sans MS">
+
+				<ComboBoxItem Content="Одноместный"></ComboBoxItem>
+				<ComboBoxItem Content="Двуместный"></ComboBoxItem>
+				<ComboBoxItem Content="Улучшенный"></ComboBoxItem>
+				<ComboBoxItem Content="Семейный"></ComboBoxItem>
+			</ComboBox>
+
+			<TextBox
+				Name="ImagePathTextBox"
+				Watermark="Путь основной картинки"
+				Text="{Binding Path=Mainimagepath}"
+				HorizontalAlignment="Stretch"/>
+
+			<Button Name="SelectFileButton" Content="Выбрать файл"/>
+
+			<TextBox
+				Name="Nomer"
+				Watermark="Номер"
+				Text="{Binding Path=Nomer}"
+				FontFamily="Comic Sans MS"/>
+
+			<TextBox
+				Name="Cost"
+				Watermark="Цена"
+				Text="{Binding Path=Cost}"
+				FontFamily="Comic Sans MS"/>
+		</StackPanel>
+
+		<Button
+				Grid.Row="1"
+				Name="SaveButton"
+				Content="Сохранить"
+				Grid.ColumnSpan="2"
+				HorizontalAlignment="Center"
+				FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="0,0,40,0"
+			Name="BackButton"
+			HorizontalAlignment="Right"
+			DockPanel.Dock="Bottom"
+			Content="Назад"
+			FontFamily="Comic Sans MS"/>
+	</Grid>
+</Window>

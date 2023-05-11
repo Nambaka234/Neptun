@@ -1,0 +1,113 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="850"
+        x:Class="Hotel_neptun2.AddSotrudnik"
+        Title="AddSotrudnik"
+		Background="Beige"
+		Icon="/images/2647659.png">
+	<Grid
+		  Margin="10"
+		  ColumnDefinitions="*,*"
+		  RowDefinitions="*,Auto">
+
+		<StackPanel Spacing="10">
+			<ComboBox
+				Name="DolgnostComboBox"
+				SelectedIndex="0"
+				FontFamily="Comic Sans MS">
+
+				<ComboBoxItem Content="Менеджер"></ComboBoxItem>
+				<ComboBoxItem Content="Администратор"></ComboBoxItem>
+			</ComboBox>
+
+			<TextBox
+				Name="First_name"
+				Watermark="Фамилия"
+				Text="{Binding Path=FirstName}"
+				FontFamily="Comic Sans MS"/>
+
+			<TextBox
+				Name="Lats_name"
+				Watermark="Имя"
+				Text="{Binding Path=LastName}"
+				FontFamily="Comic Sans MS"/>
+
+			<TextBox
+				Name="Patronymic"
+				Watermark="Отчество"
+				Text="{Binding Path=Patronymic}"
+				FontFamily="Comic Sans MS"/>
+
+			<MaskedTextBox
+				Name="data_birthday"
+				Watermark="Дата рождения (00-00-0000)"
+				Text="{Binding Path=DataBirthday}"
+				FontFamily="Comic Sans MS"/>
+			<!--<DatePicker
+				Name = "Data_Birthday"
+				DisplayDate="{Binding Path=DataBirthday}"
+				FontFamily="Comic Sans MS"/>-->
+
+			<MaskedTextBox
+				Name="Email"
+				Watermark="Email (xxxxx@xxx.xxx)"
+				Text="{Binding Path=Email}"
+				FontFamily="Comic Sans MS"/>
+
+			<MaskedTextBox
+				Name="Phone"
+				Watermark="Телефон (+7(000)000-00-00)"
+				Text="{Binding Path=Phone}"
+				FontFamily="Comic Sans MS"/>
+
+			<MaskedTextBox
+				Name="data_priema_na_rabotu"
+				Watermark="Дата приема на работу (00-00-0000)"
+				Text="{Binding Path=DataPriemaNaRabotu}"
+				FontFamily="Comic Sans MS"/>
+
+			<TextBox
+				Name="Adress"
+				Watermark="Адрес"
+				Text="{Binding Path=Adress}"
+				FontFamily="Comic Sans MS"/>
+
+			<TextBox
+				Name="Login"
+				Watermark="Логин"
+				Text="{Binding Path=Login}"
+				FontFamily="Comic Sans MS"/>
+
+			<TextBox
+				Name="Password"
+				Watermark="Пароль"
+				Text="{Binding Path=Password}"
+				FontFamily="Comic Sans MS"/>
+
+			<MaskedTextBox
+				Name="Data_uvolneniya"
+				Watermark="Дата увольнения (00-00-0000)"
+				Text="{Binding Path=DataUvolneniya}"
+				FontFamily="Comic Sans MS"/>
+		</StackPanel>
+
+		<Button Grid.Row="1"
+				Name="SaveButton"
+				Content="Сохранить"
+				Grid.ColumnSpan="2"
+				HorizontalAlignment="Center"
+				FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="0,0,40,0"
+			Name="BackButton"
+			HorizontalAlignment="Right"
+			DockPanel.Dock="Bottom"
+			Content="Назад"
+			FontFamily="Comic Sans MS"/>
+	</Grid>
+</Window>

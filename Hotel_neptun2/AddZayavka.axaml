@@ -1,0 +1,215 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="950"
+        x:Class="Hotel_neptun2.AddZayavka"
+        Title="AddZayavka"
+		Background="Beige"
+		MinWidth="800"
+		MinHeight="950"
+		Icon="/images/2647659.png">
+	<Grid Margin="10">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+
+		
+			<StackPanel Grid.Row="0" Grid.Column="0" Spacing="5">
+				<Label>ФИО</Label>
+				<TextBox
+			Name="First_name"
+			Watermark="Фамилия"
+			Text="{Binding Path=FirstName}"
+			FontFamily="Comic Sans MS"/>
+
+				<TextBox
+					Name="Lats_name"
+					Watermark="Имя"
+					Text="{Binding Path=LastName}"
+					FontFamily="Comic Sans MS"/>
+
+				<TextBox
+					Name="Patronymic"
+					Watermark="Отчество"
+					Text="{Binding Path=Patronimyc}"
+					FontFamily="Comic Sans MS"/>
+
+				<Label>Категория номеров</Label>
+				<ComboBox
+					Name="Categoriya_Nomera_ComboBox"
+					SelectedIndex="0"
+					FontFamily="Comic Sans MS">
+
+					<ComboBoxItem Content="Одноместный"></ComboBoxItem>
+					<ComboBoxItem Content="Двуместный"></ComboBoxItem>
+					<ComboBoxItem Content="Улучшенный"></ComboBoxItem>
+					<ComboBoxItem Content="Семейный"></ComboBoxItem>
+
+				</ComboBox>
+				<Button Name="SelectCategoryButton" Content="Выбрать категорию"/>
+
+				<TextBox Name="categoriya_nomera" Text="{Binding Path=CategoriyaNomera}" FontFamily="Comic Sans MS"/>
+
+
+				<Label>Дата рождения клиентов</Label>
+				<MaskedTextBox
+					Name="data_birthday"
+					Watermark="Дата рождения (00-00-0000)"
+					Text="{Binding Path=DataBirthday}"
+					FontFamily="Comic Sans MS"/>
+
+			</StackPanel>
+			<!--<ComboBox Name="date">
+				<Calendar Name="data_zaezda"></Calendar>
+				<Button Name="SelectDateButton" Content="Выбрать дату"/>
+			</ComboBox>-->
+			<!--<DatePicker/>-->
+			<!--<Label>Дата рождения клиента</Label>-->
+			<StackPanel Grid.Column="1" Grid.Row="0" Spacing="8" Margin="10">
+
+				<Label>Почта клиента</Label>
+				<MaskedTextBox
+					Name="Email"
+					Watermark="Email (xxxxx@xxx.xxx)"
+					Text="{Binding Path=Email}"
+					FontFamily="Comic Sans MS"/>
+
+				<Label>Телефон клиента</Label>
+				<MaskedTextBox
+					Name="Phone"
+					Watermark="Телефон (+7(000)000-00-00)"
+					Text="{Binding Path=Phone}"
+					FontFamily="Comic Sans MS"/>
+
+				<Label>Список номеров</Label>
+				<ComboBox
+					Name="Ponravivchiysa_nomer_ComboBox"
+					SelectedIndex="0"
+					FontFamily="Comic Sans MS">
+
+					<ComboBoxItem Content="101"></ComboBoxItem>
+					<ComboBoxItem Content="102"></ComboBoxItem>
+					<ComboBoxItem Content="103"></ComboBoxItem>
+					<ComboBoxItem Content="104"></ComboBoxItem>
+					<ComboBoxItem Content="105"></ComboBoxItem>
+					<ComboBoxItem Content="106"></ComboBoxItem>
+					<ComboBoxItem Content="107"></ComboBoxItem>
+					<ComboBoxItem Content="108"></ComboBoxItem>
+					<ComboBoxItem Content="109"></ComboBoxItem>
+					<ComboBoxItem Content="110"></ComboBoxItem>
+					<ComboBoxItem Content="201"></ComboBoxItem>
+					<ComboBoxItem Content="202"></ComboBoxItem>
+					<ComboBoxItem Content="203"></ComboBoxItem>
+					<ComboBoxItem Content="204"></ComboBoxItem>
+					<ComboBoxItem Content="205"></ComboBoxItem>
+					<ComboBoxItem Content="206"></ComboBoxItem>
+					<ComboBoxItem Content="207"></ComboBoxItem>
+					<ComboBoxItem Content="208"></ComboBoxItem>
+					<ComboBoxItem Content="209"></ComboBoxItem>
+					<ComboBoxItem Content="210"></ComboBoxItem>
+					<ComboBoxItem Content="211"></ComboBoxItem>
+					<ComboBoxItem Content="212"></ComboBoxItem>
+					<ComboBoxItem Content="213"></ComboBoxItem>
+					<ComboBoxItem Content="214"></ComboBoxItem>
+					<ComboBoxItem Content="215"></ComboBoxItem>
+				</ComboBox>
+
+				<Button Name="SelectNomerButton" Content="Выбрать номер"/>
+
+				<TextBox Name="nomer" Text="{Binding Path=Nomer}" FontFamily="Comic Sans MS"/>
+
+				<TextBox
+					Name="Kolichestvo_progivaushih"
+					Watermark="Кол-во проживающих"
+					Text="{Binding Path=KolVoProgivaushih}"
+					FontFamily="Comic Sans MS"/>
+			</StackPanel>
+
+			<StackPanel Grid.Row="1" Grid.Column="0" Spacing="5" Margin="0,100,0,0">
+				<Label>Выбрать дату заезда</Label>
+				<ComboBox Name="date1">
+					<Calendar Name="datazaezda"></Calendar>
+					<Button Name="SelectDateButton1" Content="Выбрать дату"/>
+				</ComboBox>
+
+				<MaskedTextBox
+					Name="Data_Zaezda"
+					Watermark="Дата заезда"
+					Text="{Binding Path=DataZaezda}"
+					FontFamily="Comic Sans MS"/>
+
+				<Label>Выбрать дату выезда</Label>
+				<ComboBox Name="date2">
+					<Calendar Name="dataviezda"></Calendar>
+					<Button Name="SelectDate2Button" Content="Выбрать дату"/>
+				</ComboBox>
+
+				<MaskedTextBox
+					Name="Data_Viezda"
+					Watermark="Дата выезда"
+					Text="{Binding Path=DataViezda}"
+					FontFamily="Comic Sans MS"/>
+			</StackPanel>
+
+				<StackPanel Grid.Row="1" Grid.Column="1" Spacing="5" Margin="10,100,0,0">
+				<Label>Статус запроса</Label>
+				<ComboBox
+					Name="Status_Zaprosa_ComboBox"
+					SelectedIndex="0"
+					FontFamily="Comic Sans MS">
+
+					<ComboBoxItem Content="Заявка"></ComboBoxItem>
+					<ComboBoxItem Content="Забронировано"></ComboBoxItem>
+					<ComboBoxItem Content="Проживание"></ComboBoxItem>
+					<ComboBoxItem Content="Свободен"></ComboBoxItem>
+				</ComboBox>
+
+				<Button Name="SelectStatusButton" Content="Выбрать статус"/>
+
+				<TextBox Name="status" Text="{Binding Path=StatusZaprosa}" FontFamily="Comic Sans MS"/>
+
+
+					<Label>Статус запроса</Label>
+					<ComboBox
+						Name="Status_Zayavki_ComboBox"
+						SelectedIndex="0"
+						FontFamily="Comic Sans MS">
+
+						<ComboBoxItem Content="">Одобрена</ComboBoxItem>
+						<ComboBoxItem Content="Отклонена"></ComboBoxItem>
+						<ComboBoxItem Content="На рассмотрении"></ComboBoxItem>						
+					</ComboBox>
+
+					<Button Name="SelectStatusButton2" Content="Выбрать статус"/>
+
+					<TextBox Name="status2" Text="{Binding Path=StatusZayavki}" FontFamily="Comic Sans MS"/>
+
+				</StackPanel>
+
+
+		<Button Grid.Row="2"
+				Name="SaveButton"
+				Content="Оформить"
+				Grid.ColumnSpan="2"
+				Margin="0,100,0,0"
+				HorizontalAlignment="Center"
+				FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="0,100,40,0"
+			Name="BackButton"
+			HorizontalAlignment="Right"
+			DockPanel.Dock="Bottom"
+			Content="Назад"
+			FontFamily="Comic Sans MS"/>
+	</Grid>
+</Window>

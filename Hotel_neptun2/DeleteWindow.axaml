@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Hotel_neptun2.DeleteWindow"
+        Title="DeleteWindow"
+		Background="Beige"
+		Icon="/images/2647659.png">
+	<Grid RowDefinitions="Auto,*,Auto"
+		ColumnDefinitions="*,*,*"
+		  Margin="10">
+		<StackPanel
+			Grid.Column="1"
+			Grid.Row="0"
+			Height="200"
+			Width="600">
+			<TextBlock
+					TextAlignment="Center"
+					Width="600"
+					Height="200"
+					FontSize="44"
+					TextWrapping="Wrap"
+						FontFamily="Comic Sans MS"
+					Text="Вы действительно хотите удалить этого сотрудника из базы?"/>
+		</StackPanel>
+
+		<Button
+			Grid.Column="1"
+			Grid.Row="1"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Click="YesButton_Click"
+			FontSize="24"
+			Tag="{Binding Id}"
+			FontFamily="Comic Sans MS"
+			Content="Да"/>
+
+		<Button
+			Grid.Column="1"
+			Grid.Row="1"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Click="NoButton_Click"
+			FontSize="24"
+			FontFamily="Comic Sans MS"
+			Content="Нет"/>
+	</Grid>
+</Window>

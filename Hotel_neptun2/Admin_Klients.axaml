@@ -1,0 +1,101 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="850"
+        x:Class="Hotel_neptun2.Admin_Klients"
+        Title="Admin_Klients"
+		Background="Beige"
+		Icon="/images/2647659.png">
+	<Grid RowDefinitions="Auto,*,Auto">
+		<Grid ColumnDefinitions="*,*,*">
+			<TextBox
+					Grid.Column="0"
+					HorizontalAlignment="Stretch"
+					VerticalContentAlignment="Stretch"
+					Margin="10"
+					Name="SearchTextBox"
+					Watermark="Поиск клиентов"
+					FontFamily="Comic Sans MS"/>
+
+			<ComboBox
+				Margin="10"
+				SelectedIndex="0"
+				Grid.Column="1"
+				HorizontalAlignment="Stretch"
+				Name="SortComboBox"
+				FontFamily="Comic Sans MS">
+
+				<ComboBoxItem Content="по возрастанию"/>
+				<ComboBoxItem Content="по убыванию"/>
+			</ComboBox>
+		</Grid>
+
+		<ListBox
+			Grid.Row="1"
+			Margin="10"
+			DockPanel.Dock="Top"
+			Name="KlientListBox"
+			ScrollViewer.VerticalScrollBarVisibility="Auto"
+			VerticalAlignment="Stretch">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Border BorderThickness="2"
+							BorderBrush="Black"
+							Background="{Binding Color}">
+						<DockPanel>
+							<StackPanel Orientation="Horizontal">
+
+								<StackPanel Orientation="Vertical" DockPanel.Dock="Bottom" Width="700" Margin="0,0,0,0">
+									<TextBlock Text="{Binding First_name}" FontFamily="Comic Sans MS"/>
+									<TextBlock Text="{Binding Last_name}" FontFamily="Comic Sans MS"/>
+									<TextBlock Text="{Binding Patronymic}" FontFamily="Comic Sans MS"/>
+									<TextBlock Text="{Binding Data_birthday}" FontFamily="Comic Sans MS"/>
+									<TextBlock Text="{Binding Adress}" FontFamily="Comic Sans MS"/>
+									<TextBlock Text="{Binding Email}" FontFamily="Comic Sans MS"/>
+									<TextBlock Text="{Binding Phone}" FontFamily="Comic Sans MS"/>
+									<TextBlock Text="{Binding Pasport_dannie}" FontFamily="Comic Sans MS"/>
+									<TextBlock Text="{Binding Data_progivaniya}" FontFamily="Comic Sans MS"/>
+									<StackPanel Orientation="Horizontal" DockPanel.Dock="Right" Margin="400,0,0,0">
+										<Button
+											Tag="{Binding Id}"
+											Content="редактировать"
+											Click="RedactKlientButton_Click"
+											FontFamily="Comic Sans MS"/>
+
+										<Button
+											Tag="{Binding Id}"
+											Content="удалить"
+											Click="DeleteKlientButton_Click"
+											FontFamily="Comic Sans MS"/>
+									</StackPanel>
+								</StackPanel>
+							</StackPanel>
+
+						</DockPanel>
+					</Border>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="10"
+			Name="AddKlientButton"
+			HorizontalAlignment="Center"
+			DockPanel.Dock="Bottom"
+			Content="Добавить клиента"
+			FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="2"
+			Name="BackButton"
+			DockPanel.Dock="Bottom"
+			Margin="10"
+			HorizontalAlignment="Right"
+			Content="Назад"
+			FontFamily="Comic Sans MS"/>
+	</Grid>
+</Window>

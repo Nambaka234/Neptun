@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Hotel_neptun2.Admin"
+        Title="Admin"
+		Icon="/images/2647659.png">
+	<Window.Background>
+		<ImageBrush Source="/images/2795681334.jpg" Stretch="UniformToFill" TileMode="None"/>
+	</Window.Background>
+
+	<Grid RowDefinitions="Auto,*,Auto">
+		<Button
+			Grid.Row="0"
+			Name="SotrudnikButton"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Margin="0,100,0,0"
+			Content="Сотрудники"
+			FontSize="20"
+			Foreground="White"
+			BorderBrush="Black"
+			FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="1"
+			Name="KlientButton"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Margin="0,60,0,40"
+			Content="Клиенты"
+			FontSize="20"
+			Foreground="White"
+			BorderBrush="Black"
+			FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="2"
+			Name="NomerButton"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Margin="0,0,0,80"
+			Content="Номера"
+			FontSize="20"
+			Foreground="White"
+			BorderBrush="Black"
+			FontFamily="Comic Sans MS"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="2"
+			Name="BackButton"
+			DockPanel.Dock="Bottom"
+			Margin="20"
+			HorizontalAlignment="Right"
+			Content="Выход"
+			Foreground="White"
+			BorderBrush="Black"
+			FontFamily="Comic Sans MS"/>
+	</Grid>
+</Window>
